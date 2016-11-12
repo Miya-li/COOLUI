@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width">
     <title></title>
     <script type="text/javascript" src="../src/js/dependence/YUI.3.18.1/yui-min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        YUI().use('dd-drag', function(Y) {
+            //Selector of the node to make draggable
+            var dd = new Y.DD.Drag({
+                node: '#demo'
+            });
+        });
+    </script>
+    <style>
+        #demo {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: #8DD5E7;
+            cursor: move;
+        }
+    </style>
 </head>
 <body>
-
+    <div id="demo">Drag Me</div>
 </body>
 </html>
